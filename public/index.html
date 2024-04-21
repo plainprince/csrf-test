@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSRF example</title>
 </head>
+
 <body>
     Welcome to the CSRF example homepage
+
+    <h1>Update your Email:</h1>
+    <input type="text" name="_csrf" value="Your csrf-token">
+    <input type="text" name="email" value="Your email-adress">
+    <input type="submit" value="Update Email">
 </body>
+
 </html>
